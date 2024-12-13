@@ -5,19 +5,19 @@ import team2 from '../../assets/Team/team2.jpg'
 
 const Banner = () => {
     return (
-        <div className="hero bg-base-200 min-h-96">
+        <div className="hero bg-blue-100 min-h-96">
             <div className="hero-content flex-col lg:flex-row-reverse">
                 <div className='flex-1'>
                     <motion.img
                         src={team1}
                         animate={{ y: [50, 100, 50] }}
                         transition={{ duration: 10, repeat: Infinity }}
-                        className="max-w-sm w-96 rounded-t-[40px] rounded-br-[40px] border-l-8 border-b-8 border-blue-500 shadow-2xl" />
+                        className="max-w-sm w-96 rounded-t-[40px] rounded-br-[40px] border-l-8 border-b-8 border-blue-500 shadow-2xl mb-10" />
                     <motion.img
                         src={team2}
                         animate={{ x: [100, 150, 100] }}
                         transition={{ duration: 10, delay: 5, repeat: Infinity }}
-                        className="max-w-sm w-72 rounded-t-[40px] rounded-br-[40px] border-l-8 border-b-8 border-blue-500 shadow-2xl" />
+                        className="max-w-sm w-72 rounded-t-[40px] rounded-br-[40px] border-l-8 border-b-8 border-blue-500 shadow-2xl mt-10" />
                 </div>
                 <div className='flex-1'>
                     <motion.h1

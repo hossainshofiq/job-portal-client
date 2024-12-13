@@ -27,7 +27,7 @@ const Navbar = () => {
 
     </>
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 max-w-7xl mx-auto">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -68,9 +68,9 @@ const Navbar = () => {
                         </>
                         :
                         <>
-                            <Link className='underline' to='/register'>Register</Link>
+                            <Link className='underline hover:text-blue-700 transition-transform transform hover:-translate-y-1' to='/register'>Register</Link>
                             <Link to='/signin'>
-                                <button className="btn text-white bg-blue-500 hover:bg-blue-900">Sign In</button>
+                                <button className="btn text-white bg-blue-500 hover:bg-blue-900 transition-transform hover:-translate-y-1">Sign In</button>
                             </Link>
                         </>
                 }

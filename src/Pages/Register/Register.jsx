@@ -4,6 +4,7 @@ import lottieRegister from '../../assets/LottieFiles/register.json'
 import Swal from 'sweetalert2';
 import AuthContext from '../../context/AuthContext';
 import { Link } from 'react-router-dom';
+import SocialLogin from '../Shared/SocialLogin';
 
 const Register = () => {
 
@@ -54,7 +55,8 @@ const Register = () => {
                     </p>
                 </div>
                 <div className='w-full max-w-sm'>
-                    <button className='btn w-full max-w-sm'>Sign up with Google</button>
+                    {/* <button className='btn w-full max-w-sm'>Sign up with Google</button> */}
+                    <SocialLogin></SocialLogin>
                     <div className='divider'>Or continue with</div>
                 </div>
                 <div className="card w-full max-w-sm">

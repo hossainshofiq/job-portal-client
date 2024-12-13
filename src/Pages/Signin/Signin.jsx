@@ -3,10 +3,11 @@ import lottieLogin from '../../assets/LottieFiles/login.json'
 import Lottie from 'lottie-react';
 import { Link, useNavigate } from 'react-router-dom';
 import AuthContext from '../../context/AuthContext';
+import SocialLogin from '../Shared/SocialLogin';
 
 const Signin = () => {
 
-    const {signInUser} = useContext(AuthContext);
+    const { signInUser } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const handleSignin = (e) => {
@@ -19,7 +20,7 @@ const Signin = () => {
         signInUser(email, password)
             .then(result => {
                 console.log('Sign in success', result.user);
-                navigate ('/')
+                navigate('/')
             })
             .catch(error => {
                 console.log(error);
@@ -29,14 +30,15 @@ const Signin = () => {
         <div className="hero min-h-screen grid grid-cols-12">
             <div className="hero-content flex-col col-span-8">
                 <div className="text-center">
-                    <p className='text-2xl font-semibold mb-2 text-blue-700'>Register</p>
+                    <p className='text-2xl font-semibold mb-2 text-blue-700'>Sign in</p>
                     <h1 className="text-5xl font-bold mb-1">Start for free Today</h1>
                     <p className="">
                         access to all features. No credit cart required.
                     </p>
                 </div>
                 <div className='w-full max-w-sm'>
-                    <button className='btn w-full max-w-sm'>Sign in with Google</button>
+                    {/* <button className='btn w-full max-w-sm'>Sign in with Google</button> */}
+                    <SocialLogin></SocialLogin>
                     <div className='divider'>Or continue with</div>
                 </div>
                 <div className="card w-full max-w-sm">

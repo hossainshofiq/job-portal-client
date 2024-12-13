@@ -15,13 +15,6 @@ const firebaseConfig = {
   appId: import.meta.env.VITE_appId,
 };
 
-// VITE_apiKey=AIzaSyAoYusSg_BGUoUEAe16B7iIA3ltDAdjqjE
-// VITE_authDomain=job-portal-9faeb.firebaseapp.com
-// VITE_projectId=job-portal-9faeb
-// VITE_storageBucket=job-portal-9faeb.firebasestorage.app
-// VITE_messagingSenderId=384206792928
-// VITE_appId=1:384206792928:web:548480e4cb45164dce8885
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
