@@ -20,7 +20,7 @@ const Register = () => {
         const userName = form.userName.value;
         const password = form.password.value;
         const rePassword = form.rePassword.value;
-        console.log(fullName, email, userName, password, rePassword);
+        // console.log(fullName, email, userName, password, rePassword);
 
         // password validation
         const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z]).{6,}$/;
