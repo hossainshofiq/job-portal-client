@@ -1,6 +1,6 @@
 import React from 'react';
 import { IoBag } from 'react-icons/io5';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import jobDetailsImage from '../../assets/Team/team2.jpg'
 import { FaDollarSign, FaLocationDot } from 'react-icons/fa6';
 import { HiBuildingOffice } from 'react-icons/hi2';
@@ -73,7 +73,7 @@ const JobDetails = () => {
                 </div>
             </div>
             <div className='flex gap-3'>
-                <button className='btn bg-blue-600 hover:bg-blue-900 text-white'>Apply Now</button>
+                <Link to={`/jobApply/${_id}`}><button className='btn bg-blue-600 hover:bg-blue-900 text-white'>Apply Now</button></Link>
                 <button className='btn bg-blue-600 hover:bg-blue-900 text-white'>Save Job</button>
             </div>
         </div>
