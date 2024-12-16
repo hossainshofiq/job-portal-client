@@ -6,8 +6,7 @@ import Loading from '../Pages/Loading';
 const PrivateRoute = ({ children }) => {
     const { user, loading } = useContext(AuthContext);
     const location = useLocation();
-    // console.log(location);
-    {/* <span className="loading loading-spinner loading-lg mx-auto"></span> */ }
+    console.log(location);
 
     if (loading) {
         return <Loading></Loading>

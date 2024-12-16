@@ -36,7 +36,7 @@ const Banner = () => {
                         applications every single day
                     </p>
                     <button className="btn btn-primary">Get Started</button>
-                    <p className='mt-2'>Popular Searches: <span className='underline'>Designer, Web, IOS, Developer, PHP, Senior, Engineer,</span></p>
+                    <p className='mt-2'>Popular Searches: <span className='underline cursor-pointer'>Designer, Web, IOS, Developer, PHP, Senior, Engineer,</span></p>
                 </div>
             </div>
         </div>

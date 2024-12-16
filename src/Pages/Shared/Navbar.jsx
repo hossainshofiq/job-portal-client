@@ -20,9 +20,9 @@ const Navbar = () => {
     const links = <>
         <div className='flex gap-2'>
             <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/'>Home</NavLink></li>
-            <li><NavLink to='/'>Home</NavLink></li>
+            <li><NavLink to='/myApplications'>My Applications</NavLink></li>
+            <li><NavLink to='/addJob'>Add Job</NavLink></li>
+            <li><NavLink to='/myPostedJobs'>My Posted Jobs</NavLink></li>
         </div>
 
     </>
