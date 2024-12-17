@@ -1,30 +1,37 @@
 import React, { useEffect, useState } from 'react';
 import useAuth from '../../Hooks/useAuth';
-import axios from 'axios';
+// import axios from 'axios';
+import useAxiosSecure from '../../Hooks/useAxiosSecure';
 
 const MyApplications = () => {
 
     const { user } = useAuth();
     const [jobs, setJobs] = useState([]);
-
+    const axiosSecure = useAxiosSecure();
 
     useEffect(() => {
-        // fetch(`http://localhost:5000/job-application?email=${user.email}`)
+        // fetch(`https://job-portal-sever.vercel.app/job-application?email=${user.email}`)
         //     .then(res => res.json())
         //     .then(data => {
         //         setJobs(data)
         //     })
-        axios.get(`http://localhost:5000/job-application?email=${user.email}`, { withCredentials: true })
+
+        // axios.get(`https://job-portal-sever.vercel.app/job-application?email=${user.email}`, { withCredentials: true })
+        //     .then(res => {
+        //         // console.log(res.data);
+        //         setJobs(res.data);
+        //     })
+
+        axiosSecure.get(`/job-application?email=${user.email}`)
             .then(res => {
-                // console.log(res.data);
-                setJobs(res.data);
+                setJobs(res.data)
             })
 
-
     }, [user.email])
+
     return (
-        <div>
-            <h2 className='text-3xl font-bold'>My applications: {jobs.length} </h2>
+        <div className='max-w-7xl mx-auto my-10'>
+            <h2 className='text-3xl font-bold mb-3 text-center'>My applications: {jobs.length} </h2>
 
             <div className="overflow-x-auto">
                 <table className="table">
